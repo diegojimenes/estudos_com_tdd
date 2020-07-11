@@ -1,3 +1,10 @@
+/**
+ * Verifica quantos TODOS ainda estão pendentes
+ * @param {function} fetch - node-fetch 
+ * @param {number} id - id do usuario
+ * @returns {Promise} Promise
+ */
+
 function verificarNumeroDeTodosPendentes(fetch, id) {
     return new Promise((res, rej) => {
         fetch('https://jsonplaceholder.typicode.com/todos')
