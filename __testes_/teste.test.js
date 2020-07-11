@@ -28,7 +28,7 @@ it('caminho feliz', () => {
             })
         })
     })
-    return verificarNumeroDeTodosPendentes(fetch)
+    return verificarNumeroDeTodosPendentes(fetch, 1)
         .then((numeroDeTodosPendentes) => {
             expect(numeroDeTodosPendentes).toBe(2)
         })
