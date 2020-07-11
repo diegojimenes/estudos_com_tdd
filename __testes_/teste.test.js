@@ -1,3 +1,8 @@
-it('teste', () => {
-    expect(1).toBe(1)
+import verificarNumeroDeTodosPendentes from '../src/todos'
+
+it('caminho feliz', () => {
+    verificarNumeroDeTodosPendentes()
+        .then((numeroDeTodosPendentes) => {
+            expect(numeroDeTodosPendentes).toBe(1)
+        })
 })
