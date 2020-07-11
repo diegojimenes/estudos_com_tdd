@@ -1,11 +1,11 @@
 import verificarNumeroDeTodosPendentes from '../src/todos'
 
 it('caminho feliz', () => {
-    const fetch = () => new Promise((res) => {
-        return res({
-            text: () => new Promise((res) => {
-                return res(
-                    JSON.stringify(
+    const fetch = jest.fn(() => {
+        return new Promise((res) => {
+            let api = {
+                text: () => new Promise((res) => {
+                    let mockValue = JSON.stringify(
                         [{
                             "userId": 1,
                             "id": 2,
@@ -24,8 +24,11 @@ it('caminho feliz', () => {
                             "title": "et porro tempora",
                             "completed": true
                         }]
-                    ))
-            })
+                    )
+                    return res(mockValue)
+                })
+            }
+            return res(api)
         })
     })
     return verificarNumeroDeTodosPendentes(fetch, 1)
