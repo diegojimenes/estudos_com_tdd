@@ -34,5 +34,8 @@ it('caminho feliz', () => {
     return verificarNumeroDeTodosPendentes(fetch, 1)
         .then((numeroDeTodosPendentes) => {
             expect(numeroDeTodosPendentes).toBe(2)
+            expect(fetch).toBeCalledWith(
+                'https://jsonplaceholder.typicode.com/todos'
+            )
         })
 })
