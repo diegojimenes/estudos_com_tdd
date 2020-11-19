@@ -11,7 +11,7 @@ function verificarNumeroDeTodosPendentes(fetch, id) {
             .then((res) => res.text())
             .then((body) => {
                 let valor = JSON.parse(body)
-                    .filter(({ userId, completed }) => (userId == id) && !completed).length
+                    .filter(({ userId, completed }) => (userId == id) && !completed)
                 res(valor)
             })
     })

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "watch": "jest --watch *.js",
+    "watch": "jest --watch",
     "babel-node": "babel-node --presets=latest",
     "start": "nodemon --exec npm run babel-node -- ./index.js",
     "build": "babel src -d dist"
