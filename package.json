@@ -20,12 +20,9 @@
     "jest": "^26.1.0",
     "nodemon": "^2.0.4"
   },
-  "babel": {
-    "presets": [
-      "latest"
-    ]
-  },
+  "babel": { "presets": ["@babel/preset-env"] },
   "dependencies": {
+    "moment": "^2.29.1",
     "node-fetch": "^2.6.0"
   }
 }
