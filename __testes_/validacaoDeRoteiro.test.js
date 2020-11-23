@@ -32,7 +32,7 @@ roteiro = {
     }
 }
 
-describe('cadastrar roteiro', () => {
+describe('Validações de roteiro', () => {
     it('validar roteiro', () => {
         let validacao = validarRoteiro(roteiro)
         expect(validacao).toBe(true)
