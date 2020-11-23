@@ -1,4 +1,4 @@
-import { validarRoteiro } from '../src/testWithFIrebase'
+import { validarRoteiro } from '../src/validacoes/validarRoteiro'
 import { model } from '../src/modelRoteiro'
 
 let roteiro = model({
